@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Summarizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+    <header class="card-header">
+      <h2>Chat Summarizer</h2>
+    </header>
+    
+    <div class="card-body">
+      <section class="action-section">
+        <button id="summaryBtn" class="btn btn-primary">
+          Copy Summary
+        </button>
+        <button id="rawBtn" class="btn btn-secondary">
+          Copy Raw Chat
+        </button>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="links-section">
+        <h3>Quick Launch Platforms</h3>
+        <div class="grid-links">
+          <a href="https://chatgpt.com" target="_blank" class="launch-link link-chatgpt">ChatGPT</a>
+          <a href="https://gemini.google.com" target="_blank" class="launch-link link-gemini">Gemini</a>
+          <a href="https://groq.com" target="_blank" class="launch-link link-groq">Groq</a>
+          <a href="https://deepseek.com" target="_blank" class="launch-link link-deepseek">DeepSeek</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="card-footer">
+      <p id="status"></p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

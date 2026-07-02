@@ -1,0 +1,192 @@
+/* Techy Dark Mode & Brand Tokens */
+:root {
+  --bg-main: #0a0a0c;
+  --bg-card: #111115;
+  --text-main: #f8fafc;
+  --text-muted: #64748b;
+  --border: #222227;
+  --radius: 6px; /* Sharper corners for a more industrial feel */
+  
+  /* Primary Actions */
+  --primary: #2563eb;
+  --primary-hover: #3b82f6;
+  --secondary: #18181c;
+  --secondary-hover: #222227;
+  --secondary-border: #2e2e35;
+  
+  /* Tech Brand Accents (Glowing on Hover) */
+  --brand-chatgpt: #10a37f;
+  --brand-gemini: #4285f4;
+  --brand-groq: #f55036;
+  --brand-deepseek: #2563eb;
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  padding: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card Container */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+.card-header {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+}
+
+/* Technical Status Dot in Header */
+.card-header::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #0ea5e9; /* Cyber cyan indicator */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #0ea5e9;
+}
+
+/* Body Content */
+.card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Minimalist Tech Divider */
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 2px 0;
+}
+
+/* Section Title */
+.links-section h3 {
+  margin: 0 0 8px 0;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* Quick Launch Grid */
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+/* Button & Link Core Architecture */
+.btn, .launch-link {
+  font-family: inherit;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Core Buttons */
+.btn {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #cbd5e1;
+  border: 1px solid var(--secondary-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+  border-color: #475569;
+  color: #ffffff;
+}
+
+/* Platform Quick Links */
+.launch-link {
+  padding: 8px;
+  text-decoration: none;
+  background: var(--secondary);
+  color: #94a3b8;
+  border: 1px solid var(--secondary-border);
+}
+
+.launch-link:hover {
+  background: #1e1e24;
+  color: #ffffff;
+}
+
+/* Active brand glow accents on hover */
+.link-chatgpt:hover  { border-color: var(--brand-chatgpt);  box-shadow: 0 0 8px rgba(16, 163, 127, 0.2); }
+.link-gemini:hover   { border-color: var(--brand-gemini);   box-shadow: 0 0 8px rgba(66, 133, 244, 0.2); }
+.link-groq:hover     { border-color: var(--brand-groq);     box-shadow: 0 0 8px rgba(245, 80, 54, 0.2); }
+.link-deepseek:hover { border-color: var(--brand-deepseek); box-shadow: 0 0 8px rgba(37, 99, 235, 0.2); }
+
+.btn:active, .launch-link:active {
+  transform: scale(0.98);
+}
+
+/* Dynamic Footer Status Area */
+.card-footer {
+  min-height: 24px;
+  padding: 0 14px 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#status {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
